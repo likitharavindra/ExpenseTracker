@@ -44,7 +44,7 @@ namespace ExpenseTracker.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddOrEdit([Bind("CategoryId,Title,Icon,Type")] Category category)
-        {
+        {//Added if condition
             if (ModelState.IsValid)
             {
                 if (category.CategoryId == 0)
